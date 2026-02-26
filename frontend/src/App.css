@@ -1,0 +1,26 @@
+.sidebar {
+  width: 220px;
+  background-color: #1e293b;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.menu-list {
+  list-style: none;   /* remove bullet points */
+  padding: 0;
+}
+
+.menu-list li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  color: #38bdf8;
+}

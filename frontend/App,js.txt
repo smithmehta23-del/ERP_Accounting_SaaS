@@ -1,0 +1,80 @@
+import React from "react";
+import "./App.css";
+import Invoice from "./Invoice";
+
+
+function App() {
+  const [activePage, setActivePage] = useState("invoice");
+
+  const renderPage = () => {
+    switch (activePage) {
+      case "invoice":
+        return <Invoice />;
+      case "pl":
+        return (
+          <div style={{ padding: 20 }}>
+            <h2>Profit & Loss Statement</h2>
+            <p>P&L Module Coming Next 🚀</p>
+          </div>
+        );
+      case "dashboard":
+        return (
+          <div style={{ padding: 20 }}>
+            <h2>ERP Dashboard</h2>
+            <p>Live KPI & MIS will appear here 📊</p>
+          </div>
+        );
+      default:
+        return <Invoice />;
+    }
+  };
+
+  return (
+    <div style={{ display: "flex", minHeight: "100vh", fontFamily: "Arial" }}>
+      
+      {/* Sidebar */}
+      <div style={{
+        width: "250px",
+        backgroundColor: "#1e293b",
+        color: "white",
+        padding: "20px"
+      }}>
+        <h2 style={{ color: "#38bdf8" }}>ERP System</h2>
+        <hr />
+
+        <div 
+          style={{ margin: "15px 0", cursor: "pointer" }}
+          onClick={() => setActivePage("dashboard")}
+        >
+          📊 Dashboard
+        </div>
+
+        <div 
+          style={{ margin: "15px 0", cursor: "pointer" }}
+          onClick={() => setActivePage("invoice")}
+        >
+          📄 Supplier Invoice
+        </div>
+
+        <div 
+          style={{ margin: "15px 0", cursor: "pointer" }}
+          onClick={() => setActivePage("pl")}
+        >
+          📈 Profit & Loss
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div style={{
+        flex: 1,
+        backgroundColor: "#f1f5f9",
+        padding: "30px"
+      }}>
+        {renderPage()}
+      </div>
+
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,9 @@
+
+version: '3'
+services:
+ mysql:
+  image: mysql:8
+ backend:
+  build: ./backend
+ frontend:
+  build: ./frontend

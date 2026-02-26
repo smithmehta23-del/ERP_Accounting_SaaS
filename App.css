@@ -1,0 +1,23 @@
+import { useEffect, useState } from "react";
+
+function Dashboard() {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/dashboard")
+      .then(res => res.json())
+      .then(data => setData(data));
+  }, []);
+
+  return (
+    <div>
+      <h2>Dashboard</h2>
+      <p>Total Revenue: ₹{data.totalRevenue}</p>
+      <p>Total Expenses: ₹{data.totalExpenses}</p>
+      <p>Profit: ₹{data.profit}</p>
+      <p>Pending Approvals: {data.pendingApprovals}</p>
+    </div>
+  );
+}
+
+export default Dashboard;
