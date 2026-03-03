@@ -1,0 +1,1 @@
+{\n  "name": "backend",\n  "version": "1.0.0",\n  "scripts": {\n    "start": "node index.js"\n  },\n  "dependencies": {\n    "express": "^4.17.1",\n    "cors": "^2.8.5",\n    "bcryptjs": "^2.4.3",\n    "jsonwebtoken": "^8.5.1",\n    "dotenv": "^10.0.0",\n    "mysql2": "^2.2.5"\n  }\n}
