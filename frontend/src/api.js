@@ -1,15 +1,18 @@
-const API_BASE = "http://localhost:5000";
+// API configuration
+const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
-export const apiPost = async (url, data) => {
-  const response = await fetch(`${API_BASE}${url}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-  return response.json();
+export const fetchData = async () => {
+    const response = await fetch(`${apiUrl}/data`);
+    return response.json();
 };
 
-export const apiGet = async (url) => {
-  const response = await fetch(`${API_BASE}${url}`);
-  return response.json();
+export const postData = async (data) => {
+    const response = await fetch(`${apiUrl}/data`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+    return response.json();
 };
