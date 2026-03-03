@@ -1,1 +1,14 @@
-{\n  "deployments": {\n    "production": {\n      "commands": [\n        "npm install",\n        "npm run build",\n        "npm start"\n      ]\n    }\n  }\n}
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "backend/Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10,
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 300
+  }
+}

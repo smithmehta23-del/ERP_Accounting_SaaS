@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_BASE || "/api";
 
 export const apiPost = async (url, data) => {
   const response = await fetch(`${API_BASE}${url}`, {
