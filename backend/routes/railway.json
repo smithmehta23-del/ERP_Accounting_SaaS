@@ -1,0 +1,9 @@
+{
+  "builder": "dockerfile",
+  "buildCommand": "npm install && npm run build",
+  "startCommand": "npm start",
+  "enviromentOverride": {
+    "NODE_ENV": "production",
+    "PORT": "$PORT"
+  }
+}
