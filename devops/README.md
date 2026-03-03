@@ -21,3 +21,8 @@ docker compose --env-file devops/.env -f devops/docker-compose.yml up -d --build
 - MySQL: localhost:3306
 
 The frontend proxies `/api/*` calls to the backend container.
+
+
+## Railway
+- Root `railway.json` is configured to deploy the backend using `backend/Dockerfile`.
+- In Railway, set service variables: `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `JWT_SECRET`, and (optionally) `PORT`.
