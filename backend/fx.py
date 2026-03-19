@@ -1,1 +1,0 @@
-# FX monthly rates & revaluation

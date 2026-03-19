@@ -6,4 +6,8 @@
     "NODE_ENV": "production",
     "PORT": "$PORT"
   }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
